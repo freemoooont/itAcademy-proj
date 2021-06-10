@@ -1,0 +1,56 @@
+.section-3 .box
+{
+    background: #F8F8F8;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-3 .event-card-mini
+{
+    margin-bottom: 22px;
+    margin-top: 20px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #333333;
+}
+
+.section-3 .event-card-text
+{
+    margin-bottom: 20px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #111111;
+}
+
+.section-3 .event-card-data
+{
+    margin-top: 59px;
+    text-align: center;
+    margin-bottom: 14px;
+
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #111111;
+
+    border-top: 1px solid rgba(123, 122, 131, 0.05);
+    box-sizing: border-box;
+}

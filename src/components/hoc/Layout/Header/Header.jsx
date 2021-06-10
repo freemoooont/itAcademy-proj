@@ -8,9 +8,7 @@ function Header(){
 
     return(
         <>
-            <FadeInWhenVisible>
-                <TopHeader/>
-            </FadeInWhenVisible>
+            <TopHeader/>
             <FadeInWhenVisible>
                 <BottomHeader/>
              </FadeInWhenVisible>

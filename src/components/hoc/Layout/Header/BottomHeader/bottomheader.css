@@ -1,6 +1,75 @@
-.bottom__header{
-    height: 406px;
+.btn-other
+{
+    width: 445px;
+    height: 60px;
+
+    margin-top: 60px;
     background: #2A5EE8;
+    border-radius: 25px;
+    border: 0;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.section-2
+{
+    margin-top: 120px;
+    background: #2A5EE8;
+    top: 0;
+    left: 0;
+    margin-bottom: 117px;
+    background-position-x: center;
+
+
+}
+
+.section-2 .col
+{
+    margin-top: 87px;
+    text-align: center;
+    padding-bottom: 87px;
+}
+
+.section-2 .images
+{
+    margin-bottom: 15px;
+}
+
+.section-2 .about-information h3
+{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.section-2 .text
+{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+
+    color: #FFFFFF;
 }
 
 .anime-wrapper{
@@ -13,13 +82,9 @@
     perspective: 500px;
     background: linear-gradient(180deg, #05f, #09f);
 }
-.container {
-    width: 150px;
-    height: 150px;
-    display: flex;
+.container-svg {
     place-content: center;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
 }
 

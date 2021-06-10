@@ -6,6 +6,7 @@ import Card from "./components/card/Card";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCards} from "./redux/action/cards";
 
+
 function App() {
   const dispatch = useDispatch();
   const items = useSelector(( {cards} ) => cards.items)
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       <Layout>
-        <ContentContainer>
+        <ContentContainer eventAmount={items.length}>
           {
             items.map((obj,idx)=>
             <Card key={idx} {...obj}/>)

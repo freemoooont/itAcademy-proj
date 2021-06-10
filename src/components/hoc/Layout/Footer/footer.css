@@ -1,0 +1,37 @@
+.page-footer
+{
+    margin-top: 120px;
+    background: #2A5EE8;
+}
+
+.page-footer .text-main-box
+{
+    margin-top: 53px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.page-footer .list-unstyled
+{
+    margin-top: 30px;
+    margin-bottom: 55px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.15em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}

@@ -1,3 +1,61 @@
-.top__header{
-    height: 850px;
+.section-1 .main-info
+{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #2A5EE8;
+}
+
+.section-1 .welcome-information
+{
+    margin-top: 50px;
+}
+
+.section-1 .welcome-information .col h6
+{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 12px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #7B7A83;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+
+.section-1 .welcome-information .col h1
+{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #111111;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 10px 0px;
 }

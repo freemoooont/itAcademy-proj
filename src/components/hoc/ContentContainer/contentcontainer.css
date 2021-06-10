@@ -1,0 +1,58 @@
+.section-3
+{
+    margin-top: 70px;
+}
+
+.section-3 h1
+{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #111111;
+}
+
+.section-3 .nav-item
+{
+    margin-top: 80px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #333333;
+}
+
+.section-3 .nav-item:hover
+{
+    color: #2A5EE8;
+}
+
+.section-3 .billet .col
+{
+    margin-top: 65px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    /* Typography / Title */
+
+    color: #111111;
+}
+
+.section-3 .row
+{
+    margin-top: 100px;
+}

@@ -16,9 +16,20 @@ export const setCards = (items) => {
         start.setSeconds(obj.startdate);
         obj.startdate = start;
         const daysRemain = Math.ceil( (start.getTime() - now.getTime()) / oneDay);
+        daysRemain <= 0 ? obj.status = false : obj.status = true;
         return (
             obj.daysRemain = daysRemain <= 0 ? 0 : daysRemain
         )
+    })
+
+    items.sort(function(a){
+        if (a.status) {
+            return -1
+        }
+        if (a.status===false){
+            return 1
+        }
+        return 0
     })
 
     return({

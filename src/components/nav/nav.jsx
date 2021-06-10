@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const menuData = ["Все", "Активные", "Прошедшие"];
 
-function Nav() {
+function Nav({onSelectHandle}) {
     const [activeIndex, setActive] = useState(0);
 
     return (
@@ -21,7 +21,8 @@ function Nav() {
                         key={item}
                         item={item}
                         isSelected={activeIndex === index}
-                        handleClick={() => setActive(index)}
+                        handleClick={() => {setActive(index); onSelectHandle(item)}}
+                        highHandle={onSelectHandle}
                     />
                 ))}
             </AnimateSharedLayout>
@@ -33,7 +34,6 @@ export default Nav;
 
 function MenuItem(props) {
     const { item, isSelected, handleClick = Function.prototype } = props;
-
     return (
         <motion.div
             onClick={handleClick}

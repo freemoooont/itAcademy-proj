@@ -14,7 +14,9 @@ function ContentContainer(props){
                         <div className="container-fluid">
                             <div className="collapse navbar-collapse">
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <Nav />
+                                    <Nav
+                                        onSelectHandle={props.onSelectHandler}
+                                    />
                                 </ul>
                             </div>
                         </div>

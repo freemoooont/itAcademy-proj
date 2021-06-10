@@ -1,16 +1,16 @@
 import React from "react";
-import './card.css'
+import LazyLoad from "react-lazyload";
+import './card.css';
 
 function Card ({category, course_id, description, enddate, fullname, image, organizers, startdate, daysRemain}){
 
     console.log(daysRemain)
     return(
-        // <div style={{width: "245px", height: "250px", border: "1px solid #000000" }}>
-        //     {fullname}
-        // </div>
         <div className="col-4">
             <div className="box d-flex flex-column">
-                <div><img style={{maxWidth: '100%'}} src={image && `${image}`} alt=""/></div>
+                    <LazyLoad height={200} offset={100} once>
+                        <img style={{maxWidth: '100%'}} src={image && `${image}`} alt=""/>
+                    </LazyLoad>
                 <div className="event-card-mini">
                     {category}
                 </div>

@@ -40,7 +40,8 @@ function MenuItem(props) {
             style={{
                 margin: "0 0.5rem",
                 fontWeight: 900,
-                position: "relative"
+                position: "relative",
+                cursor: "pointer"
             }}
             initial={{ color: "#000" }}
             animate={{ color: isSelected ? "rgb(42,94,232)" : "#000" }}

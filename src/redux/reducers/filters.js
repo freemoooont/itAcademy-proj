@@ -1,12 +1,12 @@
 const initialState = {
-    category: 'all',
+    query: "",
 };
 
 const filters = (state = initialState, action) => {
-    if (action.type === 'SET_CATEGORY') {
+    if (action.type === 'SET_FIND_CARDS') {
         return {
             ...state,
-            category: action.payload,
+            query: action.payload,
         };
     }
     return state;

@@ -15,6 +15,11 @@ export const setCards = (items) => {
         const start = new Date(0);
         start.setSeconds(obj.startdate);
         obj.startdate = start;
+        if (obj.enddate !== "0") {
+            const end = new Date(0);
+            end.setSeconds(obj.enddate);
+            obj.enddate = end;
+        } else {obj.enddate = null}
         const daysRemain = Math.ceil( (start.getTime() - now.getTime()) / oneDay);
         daysRemain <= 0 ? obj.status = false : obj.status = true;
         return (

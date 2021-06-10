@@ -12,11 +12,11 @@ function App() {
   const dispatch = useDispatch();
   const items = useSelector(( {cards} ) => cards.items)
   const isLoaded = useSelector(( {cards} )=> cards.isLoaded);
+  const query = useSelector(({filters})=> filters.query)
 
   React.useEffect(()=>{
     dispatch(fetchCards());
   },[])
-  console.log(items);
 
   const [category, setCategory] = React.useState('Все');
 
@@ -24,24 +24,25 @@ function App() {
       setCategory(payload)
   },[])
 
-  //Чето так себе получается
   const sortItems = React.useCallback((items) => {
       if (category ==='Активные') return items.filter((obj) => !!obj.status)
       if (category === 'Прошедшие') return items.filter((obj) => !obj.status)
       if (category === 'Все') return items
   },[category])
 
+    const queryItems = (items) => items.filter(item => item.fullname.includes(query));
+
 
   return (
       <Layout>
         <ContentContainer
-            eventAmount={sortItems(items).length}
+            eventAmount={queryItems(sortItems(items)).length}
             onSelectHandler={onSelectCategory}
         >
           {
               !isLoaded ? <Skeleton />
               :
-              sortItems(items).map((obj,idx)=>
+              queryItems(sortItems(items)).map((obj,idx)=>
             <Card key={idx} {...obj}/>)
           }
         </ContentContainer>

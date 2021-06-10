@@ -1,8 +1,17 @@
 import React from "react";
 import './contentcontainer.css'
 import Nav from '../../nav/nav'
+import {useDispatch} from "react-redux";
+import {findCards} from "../../../redux/action/filters"
 
 function ContentContainer(props){
+    const dispatch = useDispatch();
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault()
+            dispatch(findCards(e.target.value))
+        }
+    }
     return(
         <section className="section-3">
             <div className="container">
@@ -26,9 +35,9 @@ function ContentContainer(props){
                         <form className="d-flex col">
                             <input
                                 className="form-control me-2"
-                                type="search"
                                 placeholder="Search"
                                 aria-label="Search"
+                                onKeyPress={(e)=> {handleEnter(e)}}
                             />
                         </form>
                     </div>

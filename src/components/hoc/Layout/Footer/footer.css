@@ -12,7 +12,6 @@
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
-    line-height: 28px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 
@@ -28,10 +27,16 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 14px;
     letter-spacing: 0.15em;
     text-decoration-line: underline;
     text-transform: uppercase;
 
     color: #FFFFFF;
+}
+
+.page-footer a
+{
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    display: block;
 }

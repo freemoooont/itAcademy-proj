@@ -14,7 +14,7 @@ function TopHeader(){
                     </div>
                 </div>
                 <div className="row welcome-information">
-                    <div className="col">
+                    <div className="col text-center text-lg-start">
                         <h6>При поддержке ирниту</h6>
                         <h1>
                             Принимай <br/>
@@ -24,7 +24,7 @@ function TopHeader(){
                         </h1>
                         <button className="btn-other">перейти к мероприятиям</button>
                     </div>
-                    <div className="col">
+                    <div className="col d-none d-lg-block">
                         <img src={leftMan} alt=""/>
                     </div>
                 </div>

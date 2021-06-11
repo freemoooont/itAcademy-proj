@@ -1,18 +1,20 @@
-.section-3 .box
+.section-3 .event-card
 {
-    background: #F8F8F8;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
+.section-3 .event-card-completed {
+    background: #F8F8F8;
+    filter: grayscale(1);
+}
 .section-3 .event-card-mini
 {
     margin-bottom: 22px;
-    margin-top: 20px;
     font-family: Raleway;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
-    line-height: 14px;
 
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -27,7 +29,6 @@
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 
@@ -38,14 +39,13 @@
 {
     margin-top: 59px;
     text-align: center;
-    margin-bottom: 14px;
+    padding: 14px 0;
 
 
     font-family: Raleway;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 
@@ -53,4 +53,29 @@
 
     border-top: 1px solid rgba(123, 122, 131, 0.05);
     box-sizing: border-box;
+}
+
+
+.section-3 .navbar  {
+    border-bottom: 4px solid silver; padding: 0;
+}
+
+.section-3 .nav-item {
+    margin: 80px 47px -4px 47px;
+}
+
+.section-3 .nav-item:nth-child(1) {
+    margin-left: 0;
+}
+
+.section-3 .nav-item.active {
+    border-bottom: 4px solid blue;
+}
+
+
+.event-card-image
+{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
 }

@@ -12,12 +12,13 @@
     font-style: normal;
     font-weight: 900;
     font-size: 18px;
-    line-height: 21px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 
     color: #FFFFFF;
 }
+
+
 
 .section-2
 {
@@ -27,15 +28,17 @@
     left: 0;
     margin-bottom: 117px;
     background-position-x: center;
-
-
 }
 
-.section-2 .col
+.section-2 .about-information > div
 {
     margin-top: 87px;
     text-align: center;
-    padding-bottom: 87px;
+}
+
+.section-2 .about-information > div:last-child
+{
+    margin-bottom: 87px;
 }
 
 .section-2 .images
@@ -49,7 +52,6 @@
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
-    line-height: 28px;
     text-align: center;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -63,7 +65,6 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 14px;
     text-align: center;
     letter-spacing: 0.15em;
     text-transform: uppercase;

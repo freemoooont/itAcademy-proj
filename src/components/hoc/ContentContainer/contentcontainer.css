@@ -9,7 +9,6 @@
     font-style: normal;
     font-weight: 900;
     font-size: 48px;
-    line-height: 56px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 
@@ -23,7 +22,6 @@
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 21px;
     text-align: center;
     letter-spacing: 0.15em;
 
@@ -35,17 +33,15 @@
     color: #2A5EE8;
 }
 
-.section-3 .billet .col
+.section-3 .billet h2
 {
-    margin-top: 65px;
-
     font-family: Raleway;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
-    line-height: 28px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    margin: 0;
 
     /* Typography / Title */
 
@@ -55,4 +51,9 @@
 .section-3 .row
 {
     margin-top: 100px;
+}
+
+.billet input {
+    border-radius: 25px;
+    padding: 11px 16px 11px 16px;
 }

@@ -18,26 +18,35 @@ function App() {
     dispatch(fetchCards());
   },[])
 
-  const [category, setCategory] = React.useState('Все');
 
+  const [category, setCategory] = React.useState('Активные');
   const onSelectCategory = React.useCallback((payload)=> {
       setCategory(payload)
   },[])
-
   const sortItems = React.useCallback((items) => {
       if (category ==='Активные') return items.filter((obj) => !!obj.status)
       if (category === 'Прошедшие') return items.filter((obj) => !obj.status)
       if (category === 'Все') return items
   },[category])
 
-    const queryItems = (items) => items.filter(item => item.fullname.includes(query));
 
+  const queryItems = (items) => items.filter(item => item.fullname.includes(query));
+
+  const scrollRef = React.useRef();
+  const scrollToContent = (ref) => {
+      console.log("Я вызвался;", ref)
+      window.scrollTo(0,ref.current.offsetTop)
+  }
+  console.log(scrollRef)
 
   return (
-      <Layout>
+      <Layout
+          scrollToContent = {()=>scrollToContent(scrollRef)}
+      >
         <ContentContainer
             eventAmount={queryItems(sortItems(items)).length}
             onSelectHandler={onSelectCategory}
+            refToContent={scrollRef}
         >
           {
               !isLoaded ? <Skeleton />

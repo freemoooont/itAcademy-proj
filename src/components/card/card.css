@@ -56,9 +56,7 @@
 }
 
 
-.section-3 .navbar  {
-    border-bottom: 4px solid silver; padding: 0;
-}
+/*Не забудь убрать лишние стили*/
 
 .section-3 .nav-item {
     margin: 80px 47px -4px 47px;

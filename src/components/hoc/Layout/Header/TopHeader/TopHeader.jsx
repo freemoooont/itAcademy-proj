@@ -1,7 +1,8 @@
 import React from "react";
 import './topheader.css';
 import leftMan from '../../../../../assets/svgHeader/left_man.svg'
-function TopHeader(){
+function TopHeader(props){
+    console.log(props.scrollToContent)
     return(
         <section className="section-1">
             <div className="container">
@@ -22,7 +23,9 @@ function TopHeader(){
                             конкурсах и <br/>
                             олимпиадах
                         </h1>
-                        <button className="btn-other">перейти к мероприятиям</button>
+                        <button
+                            onClick={props.scrollToContent}
+                            className="btn-other">перейти к мероприятиям</button>
                     </div>
                     <div className="col d-none d-lg-block">
                         <img src={leftMan} alt=""/>

@@ -13,7 +13,7 @@ function ContentContainer(props){
         }
     }
     return(
-        <section className="section-3">
+        <section ref={props.refToContent} className="section-3">
             <div className="container">
                 <div className="row">
                     <div className="col">

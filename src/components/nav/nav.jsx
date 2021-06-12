@@ -5,7 +5,7 @@ import { useState } from "react";
 const menuData = ["Все", "Активные", "Прошедшие"];
 
 function Nav({onSelectHandle}) {
-    const [activeIndex, setActive] = useState(0);
+    const [activeIndex, setActive] = useState(1);
 
     return (
         <div
@@ -16,6 +16,15 @@ function Nav({onSelectHandle}) {
             }}
         >
             <AnimateSharedLayout>
+                <div
+                    style={{
+                        width: "100%",
+                        height: "4px",
+                        position: "absolute",
+                        bottom: "+18px",
+                        left: "5px",
+                        backgroundColor: "rgb(192,192,192)"
+                    }}/>
                 {menuData.map((item, index) => (
                     <MenuItem
                         key={item}

@@ -6,7 +6,9 @@ import {Zoom} from "react-reveal"
 function Layout(props){
     return(
         <>
-            <Header/>
+            <Header
+                scroll={props.scrollToContent}
+            />
                 <Zoom>
                     {props.children}
                 </Zoom>

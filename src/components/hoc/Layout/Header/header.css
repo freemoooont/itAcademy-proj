@@ -1,0 +1,13 @@
+.section-1 .main-info
+{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #2A5EE8;
+}

@@ -1,62 +1,47 @@
 import React from "react";
 import Layout from "./components/hoc/Layout/Layout";
-import ContentContainer from "./components/hoc/ContentContainer/ContentContainer";
-import Card from "./components/card/Card";
-import Skeleton from "react-loading-skeleton";
+import { Home, Event} from "./pages";
 
+import { Route } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCards} from "./redux/action/cards";
 
-
 function App() {
-  const dispatch = useDispatch();
-  const items = useSelector(( {cards} ) => cards.items)
-  const isLoaded = useSelector(( {cards} )=> cards.isLoaded);
-  const query = useSelector(({filters})=> filters.query)
+    const dispatch = useDispatch();
+    const items = useSelector(( {cards} ) => cards.items)
 
-  React.useEffect(()=>{
-    dispatch(fetchCards());
-  },[])
-
-
-  const [category, setCategory] = React.useState('Активные');
-  const onSelectCategory = React.useCallback((payload)=> {
-      setCategory(payload)
-  },[])
-    //сделай пацанский свич, будь челоевком
-  const sortItems = React.useCallback((items) => {
-      if (category ==='Активные') return items.filter((obj) => !!obj.status)
-      if (category === 'Прошедшие') return items.filter((obj) => !obj.status)
-      if (category === 'Все') return items
-  },[category])
-
-
-  const queryItems = (items) => items.filter(item => item.fullname.includes(query));
-  const eventAmount = queryItems(sortItems(items)).length;
-  const events = queryItems(sortItems(items));
-
-
-  const scrollRef = React.useRef();
-  const scrollToContent = (ref) => window.scrollTo(0,ref.current.offsetTop)
-
+    React.useEffect(()=>{
+        dispatch(fetchCards());
+    },[])
 
   return (
-      <Layout
-          scrollToContent = {()=>scrollToContent(scrollRef)}
-      >
-        <ContentContainer
-            eventAmount={eventAmount}
-            onSelectHandler={onSelectCategory}
-            refToContent={scrollRef}
-        >
-            {
-                !isLoaded ? <Skeleton />
-                :
-                    events.map((obj,idx)=>
-                        <Card key={idx} {...obj}/>
-                        )
-            }
-        </ContentContainer>
+      <Layout>
+          <Route path="/"
+                 exact
+                 render={(props)=>
+                     <Home
+                        {...props}
+                        items={items}
+                     />}
+          />
+          <Route path="/event/:id"
+                 exact
+                 render={
+                     (props)=>
+                         items.map((obj,idx)=>
+                             props.match.params.id===obj.course_id &&
+                             <Event
+                                 key={idx}
+                                 {...props}
+                                 description={obj.description}
+                                 daysRemain={obj.daysRemain}
+                                 image={obj.image}
+                                 organizers={obj.organizers}
+                                 fullName={obj.normalName}
+                                 status={obj.status}
+                                 //dateInfo={obj.dateInfo}
+                             />)}
+          />
       </Layout>
   );
 }

@@ -1,5 +1,6 @@
 const initialState = {
     items: [],
+    errors: [],
     isLoaded: false,
 };
 

@@ -1,20 +1,20 @@
 import React from "react";
-import BottomHeader from "./BottomHeader/BottomHeader";
-import TopHeader from "./TopHeader/TopHeader";
-import FadeInWhenVisible from "../../FadeInWhenVisible";
-
-function Header(props){
-
+import './header.css'
+function Header(){
     return(
-        <>
-            <TopHeader
-                scrollToContent={props.scroll}
-            />
-            <FadeInWhenVisible>
-                <BottomHeader/>
-             </FadeInWhenVisible>
-        </>
+        <section className="section-1">
+            <div className="container">
+                <div className="row mt-5">
+                    <div className="col main-info">
+                        Центр <br/>
+                        электронного <br/>
+                        обучения <br/>
+                        Ирниту
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 
-export default Header
+export default Header;

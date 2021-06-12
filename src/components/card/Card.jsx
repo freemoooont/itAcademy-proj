@@ -7,6 +7,18 @@ const month = [
     "Января","Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Декабря"
 ]
 function Card ({category, course_id, description, enddate, fullname, image, organizers, startdate, daysRemain, status}){
+    //АДСКИЙ КОСТЫЛЬ!!!!!!!
+    function dateRender() {
+        if(status){
+            if(enddate){
+                if(startdate.getMonth() !== enddate.getMonth()){
+                    return(`${startdate.getDate()} ${month[startdate.getMonth()]} - ${enddate.getDate()} ${month[enddate.getMonth()]} ${startdate.toLocaleDateString('default', { year: 'numeric' })}`)
+            }else return(`${startdate.getDate()} - ${enddate.getDate()} ${month[startdate.getMonth()]} ${startdate.toLocaleDateString('default', { year: 'numeric' })}`)
+            }else return(`${startdate.getDate()} ${month[startdate.getMonth()]} ${startdate.toLocaleDateString('default', { year: 'numeric' })}`)
+        }else return('МЕРОПРИЯТИЕ ЗАВЕРШЕНО')
+    }
+    const date = dateRender()
+    console.log(date)
 
     console.log(daysRemain)
     return(
@@ -27,9 +39,7 @@ function Card ({category, course_id, description, enddate, fullname, image, orga
                     </div>
                 </div>
                     <div className="event-card-data">
-                        {status ?
-                            `${startdate.getDate()} ${enddate ? `- ${enddate.getDate()}`:``} ${month[startdate.getMonth()]} ${startdate.toLocaleDateString('default', { year: 'numeric' })}`
-                            : `МЕРОПРИЯТИЕ ЗАВЕРШЕНО`}
+                        { `${date}` }
                     </div>
             </div>
         </div>

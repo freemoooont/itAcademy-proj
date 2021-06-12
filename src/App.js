@@ -23,6 +23,7 @@ function App() {
   const onSelectCategory = React.useCallback((payload)=> {
       setCategory(payload)
   },[])
+    //сделай пацанский свич, будь челоевком
   const sortItems = React.useCallback((items) => {
       if (category ==='Активные') return items.filter((obj) => !!obj.status)
       if (category === 'Прошедшие') return items.filter((obj) => !obj.status)
@@ -31,29 +32,30 @@ function App() {
 
 
   const queryItems = (items) => items.filter(item => item.fullname.includes(query));
+  const eventAmount = queryItems(sortItems(items)).length;
+  const events = queryItems(sortItems(items));
+
 
   const scrollRef = React.useRef();
-  const scrollToContent = (ref) => {
-      console.log("Я вызвался;", ref)
-      window.scrollTo(0,ref.current.offsetTop)
-  }
-  console.log(scrollRef)
+  const scrollToContent = (ref) => window.scrollTo(0,ref.current.offsetTop)
+
 
   return (
       <Layout
           scrollToContent = {()=>scrollToContent(scrollRef)}
       >
         <ContentContainer
-            eventAmount={queryItems(sortItems(items)).length}
+            eventAmount={eventAmount}
             onSelectHandler={onSelectCategory}
             refToContent={scrollRef}
         >
-          {
-              !isLoaded ? <Skeleton />
-              :
-              queryItems(sortItems(items)).map((obj,idx)=>
-            <Card key={idx} {...obj}/>)
-          }
+            {
+                !isLoaded ? <Skeleton />
+                :
+                    events.map((obj,idx)=>
+                        <Card key={idx} {...obj}/>
+                        )
+            }
         </ContentContainer>
       </Layout>
   );

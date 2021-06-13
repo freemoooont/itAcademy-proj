@@ -3,22 +3,28 @@ import people from "../../assets/people.svg";
 import "./event.css";
 import {useSelector} from "react-redux";
 
+import Modal from "../../components/ui/modal/modal"
 function Event({stateHandler}){
     React.useEffect(()=>window.scrollTo(0,0),[])
+
+    //костыль, каких еще свет не видел
     const handler = stateHandler()
     let state;
     let isLoaded = useSelector(({event})=>event.isLoaded);
     state = useSelector(({event})=>event.item);
-
     if (handler[0]){
         state = handler[1];
         isLoaded = true;
     }
 
+    const [show, setShow] = React.useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return(
 
             <>
-                {isLoaded ?
+                {isLoaded &&
                 <>
 
                     <section className="section-1-event">
@@ -28,7 +34,7 @@ function Event({stateHandler}){
                                     <div><img style={{width: '540px', height: '351px'}} src={state[0].image} alt=""/>
                                     </div>
                                     <div className="text-under-image text-bold">
-                                        Дата проведения: НУ ТИПА
+                                        Дата проведения: {state[0].dateForRender}
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-sm-12">
@@ -36,14 +42,21 @@ function Event({stateHandler}){
                                         {state[0].fullName}
                                     </div>
                                     <div className="event-other">
-                                        <div className="text-bold">Участвуют: <span>kek</span> <img src={people}
-                                                                                                    alt=""/></div>
+                                        <div className="text-bold">Участвуют:
+                                            <span className="event-other-text-mini">>
+                                                kek
+                                            </span>
+                                            <img src={people} alt=""/>
+                                        </div>
                                         <div className="text-bold">До
-                                            начала: <span>{`${state[0].daysRemain} ${state[0].daysRemain < 5 ? `дня` : `дней`}`}</span>
+                                            начала:
+                                            <span className="event-other-text-mini">
+                                                {`${state[0].daysRemain} ${state[0].daysRemain < 5 ? `дня` : `дней`}`}
+                                            </span>
                                         </div>
                                     </div>
-
-                                    <button className="btn-other">Подать заявку на участие</button>
+                                    <button className="btn-other" onClick={handleShow}>Подать заявку на участие</button>
+                                    <Modal show={show} handleClose={handleClose}/>
                                 </div>
                             </div>
                         </div>
@@ -64,8 +77,7 @@ function Event({stateHandler}){
                             </div>
                         </div>
                     </section>
-                </>
-                : null}
+                </>}
             </>
     )
 }

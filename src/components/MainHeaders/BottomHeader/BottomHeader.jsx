@@ -19,6 +19,7 @@ function BottomHeader(){
     const [ref, inView] = useInView();
     const [wasView, setWasView] = React.useState(false);
 
+    const refForScroll = React.useRef();
     useEffect(()=>{
         if (inView) {
             setWasView(true)
@@ -29,7 +30,7 @@ function BottomHeader(){
         if (inView) {
             controls.start("visible");
             window.scrollTo({
-                top: 690,
+                top: 830,
                 behavior: "smooth"
             })
         }
@@ -38,7 +39,7 @@ function BottomHeader(){
     return(
         <>
             <section ref={ref} className="section-2">
-                <div className="container">
+                <div ref={refForScroll} className="container">
                     <div className="row about-information d-flex justify-content-around">
                         <div className="col-12 col-md-6 col-lg-4">
                             <div className="container-svg">

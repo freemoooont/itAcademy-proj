@@ -12,7 +12,7 @@ function Nav({onSelectHandle}) {
             style={{
                 display: "flex",
                 padding: "1rem",
-                borderRadius: "25px"
+                borderRadius: "25px",
             }}
         >
             <AnimateSharedLayout>
@@ -22,7 +22,7 @@ function Nav({onSelectHandle}) {
                         height: "4px",
                         position: "absolute",
                         bottom: "+18px",
-                        left: "5px",
+                        left: "23px",
                         backgroundColor: "rgb(192,192,192)"
                     }}/>
                 {menuData.map((item, index) => (
@@ -66,11 +66,10 @@ function ActiveLine() {
         <motion.div
             layoutId="activeItem"
             style={{
-                width: "calc(100% - 10px)",
+                width: "100%",
                 height: "4px",
                 position: "absolute",
                 bottom: "-6px",
-                left: "5px",
                 backgroundColor: "rgb(42,94,232)"
             }}
         />

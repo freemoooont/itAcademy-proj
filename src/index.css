@@ -11,3 +11,769 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-info
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #2A5EE8;
+}
+
+
+@keyframes move_eye { from { transform: rotate(0deg); } to { transform: rotate(359deg); }  }
+.ebator {
+    animation: move_eye linear 4s infinite;
+}
+
+.section-1 .welcome-information
+{
+  margin-top: 50px;
+}
+
+.section-1 .welcome-information h6
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #7B7A83;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 10px 0px;
+}
+
+.section-1 .welcome-information h1
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #111111;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 10px 0px;
+}
+
+.btn-other
+{
+  width: 445px;
+  height: 60px;
+
+  margin-top: 60px;
+  background: #2A5EE8;
+  border-radius: 25px;
+  border: 0;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.section-2
+{
+  margin-top: 120px;
+  background: #2A5EE8;
+  top: 0;
+  left: 0;
+  margin-bottom: 117px;
+  background-position-x: center;
+}
+
+.section-2 .about-information > div
+{
+  margin-top: 87px;
+  text-align: center;
+}
+
+.section-2 .about-information > div:last-child
+{
+  margin-bottom: 87px;
+}
+
+
+.section-2 .images
+{
+  margin-bottom: 15px;
+}
+
+.section-2 .about-information h3
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.section-2 .text
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+
+  color: #FFFFFF;
+}
+
+.section-3
+{
+  margin-top: 70px;
+}
+
+.section-3 h1
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+.section-3 .nav-item
+{
+  margin-top: 80px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.15em;
+
+  color: #333333;
+}
+
+.section-3 .nav-item:hover
+{
+  color: #2A5EE8;
+}
+
+.section-3 .event-card-year
+{
+  margin-bottom: 22px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+
+  padding: 2em 2em 0 2em;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #333333;
+}
+
+.section-3 .billet h2
+{
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+  /* Typography / Title */
+
+  color: #111111;
+}
+
+.section-3 .row
+{
+  margin-top: 100px;
+}
+
+.section-3 .event-card-box
+{
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-3 .event-card
+{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.section-3 .event-card:hover {
+  box-shadow:  0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.section-3 .event-card-completed
+{
+  background: #F8F8F8;
+  filter: grayscale(1) ;
+}
+
+.section-3 .event-card-mini-main
+{
+  padding: 0 2em 1em 2em;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+
+  color: #2A5EE8;
+}
+
+.section-3 .event-card-mini
+{
+  flex-grow: 1;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+
+  color: #333333;
+}
+
+.section-3 .event-card-mini > div {
+  max-height: 100%;
+  overflow: hidden;
+  transition: all .3s;
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 2em 2em 2em;
+}
+
+.section-3 .event-card-completed .event-card-mini > div
+{
+  background-color: #F8F8F8;
+}
+
+
+
+.section-3 .event-card-mini:hover > div {
+  max-height: 400px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-3 .event-card-text
+{
+  margin-bottom: 20px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0 2em 0 2em;
+
+  color: #111111;
+}
+
+.section-3 .event-card-data-box
+{
+  height: 44px;
+}
+
+.section-3 .event-card-data
+{
+  text-align: center;
+  padding: 14px 0;
+
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #111111;
+
+  border-top: 1px solid rgba(123, 122, 131, 0.05);
+  box-sizing: border-box;
+}
+
+.section-3 .nav-item
+{
+  margin: 80px 47px -4px 47px;
+}
+
+.section-3 .nav-item:nth-child(1)
+{
+  margin-left: 0;
+}
+
+.section-3 .nav-item.active
+{
+  border-bottom: 4px solid blue;
+}
+
+.section-3 a{
+  text-decoration: none;
+}
+
+.event-card-image
+{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page-footer
+{
+  margin-top: 0;
+  background: #2A5EE8;
+}
+
+.page-footer .text-main-box
+{
+  margin-top: 53px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.page-footer .list-unstyled
+{
+  margin-top: 30px;
+  margin-bottom: 55px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.page-footer a
+{
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.billet input , .billet select
+{
+  border-radius: 25px;
+  padding: 11px 16px 11px 16px;
+}
+
+@media (max-width: 525px)
+{
+  .section-1 .welcome-information h1
+  {
+    font-size: 35px;
+  }
+
+  .section-3 h1
+  {
+    font-size: 35px;
+  }
+
+  .btn-other
+  {
+    width: 345px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 770px)
+{
+  .section-3 .row
+  {
+    margin-top: 25px;
+  }
+
+  .form-control
+  {
+    margin-bottom: 25px;
+  }
+}
+
+.text-normal
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15em;
+
+  color: #111111;
+}
+
+.text-bold
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.main-info
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #2A5EE8;
+}
+
+.main-info a{
+  text-decoration: none;
+}
+
+.card-event
+{
+  margin-top: 50px;
+}
+
+.text-under-image
+{
+  margin-top: 15px;
+}
+
+.event-name
+{
+  margin-bottom: 105px;
+}
+
+.section-2-event
+{
+  background: #F8F8F8;
+  top: 0;
+  left: 0;
+  background-position-x: center;
+}
+
+.event-other-text-mini
+{
+  color: #2A5EE8;
+}
+
+.section-2-event .main-about-event
+{
+  margin-top: 53.5px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+
+  color: #111111;
+}
+
+.section-2-event .about-event
+{
+  margin-top: 30px;
+  padding-bottom: 53px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+
+  color: #333333;
+}
+
+.modal-content
+{
+  background: #2A5EE8;
+}
+
+.modal-title
+{
+  margin-top: 23px;
+  margin-bottom: 23px;
+
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.modal .btn-close
+{
+  color: #FFFFFF;
+  width: 25px;
+  height: 25px;
+}
+
+.FIO
+{
+  margin-bottom: 10px;
+}
+
+.Email
+{
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.Check
+{
+
+  text-align: center;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15em;
+
+  color: #FFFFFF;
+}
+
+.form-check-input {
+  margin-top: 0;
+  margin-right: 1em;
+}
+
+.form-check {
+  margin-top: 55px;
+}
+
+.form-text
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15em;
+
+  color: #FFFFFF;
+}
+
+.form-group-radius
+{
+  border-radius: 25px;
+}
+
+.form-text-mini
+{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+
+  color: #DA1414;
+}
+
+.form-check-input[type=checkbox]
+{
+  border-radius: 25px;
+
+}
+
+.btn-primary
+{
+  width: 445px;
+  height: 60px;
+
+  margin-top: 55px;
+  margin-bottom: 19px;
+  background: #FFFFFF;
+  border-radius: 25px;
+  border: 0;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #2A5EE8;
+}
+
+.modal-dialog .close-button
+{
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.modal-header
+{
+  border-bottom: none;
+}
+
+.page-footer
+{
+  background: #2A5EE8;
+}
+
+.page-footer .text-main-box
+{
+  margin-top: 53px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.page-footer .list-unstyled
+{
+  margin-top: 30px;
+  margin-bottom: 55px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.page-footer a
+{
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  display: block;
+}
+
+@media (max-width: 525px)
+{
+
+  .btn-other
+  {
+    width: 345px;
+    height: 60px;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .btn-primary
+  {
+    width: 345px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1090px)
+{
+  .event-name
+  {
+    margin-bottom: 30px;
+  }
+
+  .text-under-image
+  {
+    margin-bottom: 30px;
+  }
+
+  .section-2-event .main-about-event
+  {
+    margin-top: 30px;
+  }
+
+  .organizers
+  {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .btn-other
+  {
+    width: 345px;
+    height: 60px;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.organizers
+{
+  margin-top: 53.5px;
+  margin-bottom: 30px;
+}

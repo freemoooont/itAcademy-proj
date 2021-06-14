@@ -1,14 +1,17 @@
 import React from "react";
-import './header.css'
+import {Link} from "react-router-dom";
+
 function Header(){
     return(
         <header className="container">
             <div className="row mt-5 ">
                 <div className="col main-info">
-                    Центр <br/>
-                    электронного <br/>
-                    обучения <br/>
-                    Ирниту
+                    <Link to="/">
+                        Центр <br/>
+                        электронного <br/>
+                        обучения <br/>
+                        Ирниту
+                    </Link>
                 </div>
             </div>
         </header>

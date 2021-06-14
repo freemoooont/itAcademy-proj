@@ -1,5 +1,4 @@
 import React from "react";
-import './contentcontainer.css'
 import Nav from '../../nav/nav'
 import {useDispatch} from "react-redux";
 import {findCards} from "../../../redux/action/filters"
@@ -33,13 +32,22 @@ function ContentContainer(props){
                         <div className="col-md-6 col-sm-12 align-items-center  d-flex mb-4 ">
                             <h2>{props.eventAmount} мероприятий</h2>
                         </div>
-                        <form className="col-md-6 col-sm-12">
+                        <div className="col-1"></div>
+                        <form className="col-md-3 col-sm-12">
                             <input
                                 className="form-control me-2"
                                 placeholder="Введите название..."
                                 type="search"
                                 onKeyPress={(e)=> {handleEnter(e)}}
                             />
+                        </form>
+                        <form className="col-md-2 col-sm-12">
+                            <select className="form-select me-2" name="" id="">
+                                <option value="2021">2021</option>
+                                <option value="MOOK">MOOK</option>
+                                <option value="2020">2020</option>
+                                <option value="учебные курсы">учебные курсы</option>
+                            </select>
                         </form>
                     </div>
                     <div className="row">

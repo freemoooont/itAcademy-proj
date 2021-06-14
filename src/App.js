@@ -7,9 +7,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchCards} from "./redux/action/cards";
 import {fetchEventById} from "./redux/action/event";
 
+import smoothscroll from "smoothscroll-polyfill";
+
 function App() {
+    smoothscroll.polyfill();
+
     const dispatch = useDispatch();
-    const items = useSelector(( {cards} ) => cards.items)
+    const items = useSelector(( {cards} ) => cards.items);
+
+    const [ebator, ebatorOn] = React.useState(false);
 
     React.useEffect(()=>{
         dispatch(fetchCards());
@@ -27,7 +33,9 @@ function App() {
     }
 
   return (
-      <Layout>
+      <Layout
+          ebator={ebator}
+      >
 
           <Route path="/"
                  exact
@@ -35,6 +43,7 @@ function App() {
                      <Home
                         {...props}
                         items={items}
+                        onManClick={()=>ebatorOn(true)}
                      />}
           />
 

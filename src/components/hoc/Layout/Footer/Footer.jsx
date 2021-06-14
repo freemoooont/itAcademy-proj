@@ -1,5 +1,4 @@
 import React from "react";
-import './footer.css'
 
 function Footer() {
     return(
@@ -12,16 +11,16 @@ function Footer() {
 
                         <ul className="list-unstyled">
                             <li>
-                                <a href="#!">пользовательское соглашение</a>
+                                <a href="https://open.istu.edu/login/policy.php">пользовательское соглашение</a>
                             </li>
                             <li>
-                                <a href="#!">публичная оферта на указание платных образовательных услуг</a>
+                                <a href="https://open.istu.edu/enrol/robokassa/pay_policy1.php">публичная оферта на указание платных образовательных услуг</a>
                             </li>
                             <li>
-                                <a href="#!">публичная оферта на оказание платных образовательных <br/> услуг по пользовательским соглашениям</a>
+                                <a href="https://open.istu.edu/enrol/robokassa/pay_policy0.php">публичная оферта на оказание платных образовательных <br/> услуг по пользовательским соглашениям</a>
                             </li>
                             <li>
-                                <a href="#!">Сводка хранения данных</a>
+                                <a href="https://open.istu.edu/admin/tool/dataprivacy/summary.php">Сводка хранения данных</a>
                             </li>
                         </ul>
                     </div>

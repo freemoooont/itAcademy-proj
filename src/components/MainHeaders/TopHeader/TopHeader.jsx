@@ -1,5 +1,4 @@
 import React from "react";
-import './topheader.css';
 import leftMan from '../../../assets/svgHeader/left_man.svg'
 function TopHeader(props){
     return(
@@ -18,8 +17,8 @@ function TopHeader(props){
                             onClick={props.scrollToContent}
                             className="btn-other">перейти к мероприятиям</button>
                     </div>
-                    <div className="col d-none d-lg-block">
-                        <img src={leftMan} alt=""/>
+                    <div className="col d-none d-lg-block man">
+                        <img onClick={props.onManClick} src={leftMan} alt=""/>
                     </div>
                 </div>
             </div>

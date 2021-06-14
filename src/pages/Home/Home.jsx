@@ -4,22 +4,18 @@ import Card from "../../components/card/Card";
 import MainHeaders from "../../components/MainHeaders/MainHeaders";
 import LoadingCard from "../../components/card/LoadingCard";
 
-import {Zoom} from "react-reveal";
-
 import {useSelector} from "react-redux";
 
-
-
-function Home({items}) {
+function Home({items, onManClick}) {
     const isLoaded = useSelector(( {cards} )=> cards.isLoaded);
     const query = useSelector(({filters})=> filters.query)
 
 
-    const [category, setCategory] = React.useState('Активные');
+    const [category, setCategory] = React.useState('Все');
     const onSelectCategory = React.useCallback((payload)=> {
         setCategory(payload)
     },[])
-    //сделай пацанский свич, будь челоевком
+
     const sortItems = React.useCallback((items) => {
         if (category ==='Активные') return items.filter((obj) => !!obj.status)
         if (category === 'Прошедшие') return items.filter((obj) => !obj.status)
@@ -33,14 +29,14 @@ function Home({items}) {
 
 
     const scrollRef = React.useRef();
-    const scrollToContent = (ref) => window.scrollTo(0,ref.current.offsetTop)
+    const scrollToContent = (ref) => window.scrollTo(0,ref.current.offsetTop);
 
     return (
         <>
             <MainHeaders
+                onManClick={onManClick}
                 scrollToContent = {()=>scrollToContent(scrollRef)}
             />
-            <Zoom>
                 <ContentContainer
                     eventAmount={eventAmount}
                     onSelectHandler={onSelectCategory}
@@ -58,7 +54,6 @@ function Home({items}) {
                             )
                     }
                 </ContentContainer>
-            </Zoom>
         </>
     );
 }

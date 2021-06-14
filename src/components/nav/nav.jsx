@@ -5,13 +5,13 @@ import { useState } from "react";
 const menuData = ["Все", "Активные", "Прошедшие"];
 
 function Nav({onSelectHandle}) {
-    const [activeIndex, setActive] = useState(1);
+    const [activeIndex, setActive] = useState(0);
 
     return (
         <div
             style={{
                 display: "flex",
-                padding: "1rem",
+                padding: "1rem 1rem 1rem 0",
                 borderRadius: "25px",
             }}
         >
@@ -22,7 +22,7 @@ function Nav({onSelectHandle}) {
                         height: "4px",
                         position: "absolute",
                         bottom: "+18px",
-                        left: "23px",
+                        left: "0",
                         backgroundColor: "rgb(192,192,192)"
                     }}/>
                 {menuData.map((item, index) => (
@@ -47,10 +47,11 @@ function MenuItem(props) {
         <motion.div
             onClick={handleClick}
             style={{
-                margin: "0 0.5rem",
+                padding: "0 0.5rem",
                 fontWeight: 900,
                 position: "relative",
-                cursor: "pointer"
+                cursor: "pointer",
+                marginRight: "45px",
             }}
             initial={{ color: "#000" }}
             animate={{ color: isSelected ? "rgb(42,94,232)" : "#000" }}
@@ -70,6 +71,7 @@ function ActiveLine() {
                 height: "4px",
                 position: "absolute",
                 bottom: "-6px",
+                marginLeft: "-0.5rem",
                 backgroundColor: "rgb(42,94,232)"
             }}
         />

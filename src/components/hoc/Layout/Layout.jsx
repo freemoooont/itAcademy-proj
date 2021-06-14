@@ -6,7 +6,9 @@ function Layout(props){
     return(
         <>
             <Header/>
-                {props.children}
+                <div className={props.ebator? `ebator`:null}>
+                    {props.children}
+                </div>
             <Footer/>
         </>
     )

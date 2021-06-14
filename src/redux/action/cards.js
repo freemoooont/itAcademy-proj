@@ -2,9 +2,12 @@ import axios from "axios";
 import {sanitizeData} from "../../Services/Santizer"
 
 export const fetchCards = () => dispatch => {
-    axios.get('https://open.istu.edu/api/get_all_events.php')
+    axios.get('https://open.istu.edu/api/get_all_events.php',{
+        params:{
+            _limit: 6
+        }})
         .then(({ data }) => {
-        dispatch(setCards(data.slice(0,10)))
+        dispatch(setCards(data))
     })
 };
 
@@ -12,15 +15,7 @@ export const setCards = (items) => {
 
     items = sanitizeData(items);
 
-    items.sort(function(a){
-        if (a.status) {
-            return -1
-        }
-        if (a.status===false){
-            return 1
-        }
-        return 0
-    })
+    items.sort((a,b)=>new Date(a.startdate) - new Date(b.startdate))
 
     return({
     type: 'SET_CARDS',
